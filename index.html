@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta name="description"
+        content="A sleek and intuitive Todo List Application that helps you organize your tasks efficiently. Built with HTML, CSS, and JavaScript, this app ensures that your tasks are managed effortlessly and persistently using browser local storage.">
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/index.css">
+    <!-- <link rel="canonical" href=""> -->
+    <link rel="icon" type="image/x-icon" href="../../assets/img/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="../../assets/img/favicon-32x32.png">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="nvmwhoiam">
+    <meta name="keywords"
+        content="Todo List App, Task Management, Productivity Tool, JavaScript Todo App, Task Organizer, Local Storage Todo App, Responsive Task Manager, Simple Task Manager, Interactive Todo Application, Daily Planner">
+
+    <title>Todo List Application | Lynqis.io</title>
+</head>
+
+<body>
+
+    <main class="main_container">
+
+        <div class="todo">
+
+            <div class="todo_header">
+                <h1>Todo List</h1>
+            </div>
+
+            <div class="todo_body">
+                <ul class="todo_lists" id="todo_lists"> </ul>
+            </div>
+
+            <div class="todo_footer">
+                <button type="button" class="btn_primary" data-btn="new_task" aria-label="">
+                    <i class="icon_plus-solid"></i> New task
+                </button>
+            </div>
+
+        </div>
+
+        <div class="backdrop" data-state="closed">
+
+            <button type="button" class="btn_icon" data-btn="new_task" aria-label="">
+                <i class="icon_xmark-solid"></i>
+            </button>
+
+            <div class="modal" data-state="closed">
+
+                <div class="modal_header">
+                    <h2>Add new task</h2>
+                </div>
+
+                <div class="modal_body">
+
+                    <form method="post" action="#" class="inputs_container" id="todoForm">
+                        <div class="input_wrapper">
+                            <label for="todo_title">Title</label>
+                            <div class="modal_body_input">
+                                <input type="text" id="todo_title" aria-label="" name="todo_title" autocomplete="title"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="input_wrapper">
+                            <label for="todo_description">Description:</label>
+                            <div class="modal_body_input">
+                                <textarea id="todo_description" aria-label="" name="todo_description"
+                                    autocomplete="description"></textarea>
+                            </div>
+                            <div class="form_error">
+                                <small class="login_error error"></small>
+                            </div>
+                        </div>
+
+                        <div class="modal_body_button">
+                            <button type="submit" class="btn_primary" aria-label="">
+                                <span class="btn_txt">Add task</span>
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+
+                <div class="modal_footer">
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+
+    <script type="module" src="assets/js/index.js"></script>
+
+</body>
+
+</html>

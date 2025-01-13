@@ -1,0 +1,143 @@
+@import "./general/icons.css";
+@import "./general/base.css";
+@import "./general/keyframes.css";
+@import "./general/mixin.scss";
+
+.main_container {
+    height: 100dvh;
+    @include Dflex(center);
+
+    .todo {
+        width: 100%;
+        max-width: 600px;
+        padding: var(--md-p);
+        display: flex;
+        flex-direction: column;
+        z-index: 99;
+
+        &_header {
+            text-align: center;
+        }
+
+        &_body {
+            .todo_lists {
+                display: flex;
+                flex-direction: column;
+                gap: var(--md-p);
+
+                .todo_item {
+                    border-bottom: 1px solid var(--border-color);
+                    @include Dflex(space-between);
+                    gap: var(--md-p);
+                    padding: var(--sm-p);
+
+                    .checkbox_label {
+                        display: flex;
+                        flex: 1;
+                        align-items: center;
+                        gap: var(--md-p);
+                    }
+
+                    button {
+                        border: 1px solid var(--border-color);
+                    }
+
+                    &.completed {
+                        .todo_title {
+                            text-decoration: line-through;
+                        }
+                    }
+                }
+            }
+        }
+
+        &_footer {
+            @include Dflex(center);
+        }
+    }
+
+    .backdrop {
+        width: 100dvw;
+        height: 100dvh;
+        @include position(fixed, $top: 0, $left: 0);
+        @include dataStateFade();
+        z-index: 999;
+
+        .btn_icon {
+            @include position(absolute, $top: var(--md-p), $right: var(--md-p));
+            z-index: 99;
+
+            i {
+                font-size: var(--font-size-3xlarge);
+            }
+        }
+
+        .modal {
+            width: 100%;
+            @include dataStateFade();
+            display: flex;
+            flex-direction: column;
+            gap: var(--xl-p);
+            padding: var(--md-p);
+            background-color: var(--background-color-secondary);
+
+            &_header {
+                text-align: center;
+            }
+
+            &_body {
+                textarea {
+                    min-height: 100px;
+                    max-height: 300px;
+                    resize: vertical;
+                }
+
+                button {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        & {
+            .todo {
+                height: 100dvh;
+                gap: var(--md-p);
+
+                &_body {
+                    height: 100%;
+                }
+            }
+
+            .backdrop {
+                .modal {
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        & {
+            padding: var(--md-p);
+
+            .todo {
+                border: 1px solid var(--accent-color);
+                border-radius: var(--border-radius-light);
+                gap: var(--xl-p);
+            }
+
+            .backdrop {
+                @include Dflex(center);
+                background-color: var(--low-opacity);
+                padding: var(--md-p);
+
+                .modal {
+                    max-width: 500px;
+                    border-radius: var(--border-radius-light);
+                }
+            }
+        }
+    }
+}
