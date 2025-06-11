@@ -4,7 +4,7 @@ A sleek and intuitive **Todo List Application** that helps you organize your tas
 
 ## Demo
 
-Try the live demo here: [Todo List App Demo](https://lynqis.io/demo/todo-list-app/)
+Try the live demo here: [Todo List App Demo](https://sadevworks.com/demo/todo-list-app/)
 
 ## Installation
 
@@ -117,7 +117,7 @@ Here are some ideas to improve the app:
 
 ## Contact
 
-If you have any questions or need assistance, please do not hesitate to reach out. I apologize if any part of this setup is not clear; this is my first major project, and I am putting in continuous effort to improve it. Feel free to contact me at [info@lynqis.io](mailto:info@lynqis.io) or open an issue on the [GitHub Repository](https://github.com/nvmwhoiam/todo-list-app).
+If you have any questions or need assistance, please do not hesitate to reach out. I apologize if any part of this setup is not clear; this is my first major project, and I am putting in continuous effort to improve it. Feel free to contact me at [info@sadevworks.com](mailto:info@sadevworks.com) or open an issue on the [GitHub Repository](https://github.com/nvmwhoiam/todo-list-app).
 
 ## Contributing
 
@@ -129,5 +129,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Author
 
-- nvmwhoiam
-- GitHub: [GitHub Profile](https://github.com/nvmwhoiam/)
+- Email: [info@sadevworks.com](mailto:info@sadevworks.com)
+- Website: [sadevworks.com](https://sadevworks.com)
+- GitHub: [@nvmwhoiam](https://github.com/nvmwhoiam/)
