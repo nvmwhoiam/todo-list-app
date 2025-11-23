@@ -10,36 +10,48 @@
         content="A sleek, intuitive Todo List App built with HTML, CSS & JS. Organize tasks easily with persistent storage via localStorage. Fast, simple, and efficient.">
     <link rel="icon" type="image/x-icon" href="../../assets/img/favicon-16x16.png">
     <link rel="icon" type="image/x-icon" href="../../assets/img/favicon-32x32.png">
-    <link rel="canonical" href="https://sadevworks.com/demo/todo-list-app/">
     <meta name="author" content="nvmwhoiam">
     <meta name="keywords"
-        content="Todo List App, Task Management, Productivity Tool, JavaScript Todo App, Task Organizer, Local Storage Todo App, Responsive Task Manager, Simple Task Manager, Interactive Todo Application, Daily Planner">
+        content="to-do list app, task manager, daily task list, task organizer, free to-do list, simple task manager">
 
-    <meta name="robots" content="index, follow">
-    <title>Todo List Application | SADevWorks.com</title>
+    <meta name="robots" content="noindex, nofollow">
+    <title>Interactive Todo List with Persistent Storage</title>
 </head>
 
 <body>
 
     <main class="main_container">
 
-        <div class="todo">
+        <header class="header_container">
+            <h1>Todo List</h1>
+        </header>
 
-            <div class="todo_header">
-                <h1>Todo List</h1>
+        <section class="section_container">
+
+            <div class="todo">
+
+                <div class="todo_body">
+                    <ul class="todo_lists" id="todo_lists"> </ul>
+                </div>
+
+                <div class="todo_footer">
+                    <button type="button" class="btn_primary" data-btn="new_task" aria-label="">
+                        <i class="icon_plus-solid"></i> New task
+                    </button>
+                </div>
+
             </div>
 
-            <div class="todo_body">
-                <ul class="todo_lists" id="todo_lists"> </ul>
-            </div>
+        </section>
 
-            <div class="todo_footer">
-                <button type="button" class="btn_primary" data-btn="new_task" aria-label="">
-                    <i class="icon_plus-solid"></i> New task
-                </button>
-            </div>
+        <footer class="footer_container">
 
-        </div>
+            <p class="footer_content">
+                Copyright &copy; 2025. All Rights Reserved | Powered By <a href="https://sadevworks.com" hreflang="en"
+                    aria-label="Home page">SADevWorks.com</a>
+            </p>
+
+        </footer>
 
         <div class="backdrop" data-state="closed">
 

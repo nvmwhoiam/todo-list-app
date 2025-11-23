@@ -5,55 +5,65 @@
 
 .main_container {
     height: 100dvh;
-    @include Dflex(center);
 
-    .todo {
-        width: 100%;
-        max-width: 600px;
-        padding: var(--md-p);
-        display: flex;
-        flex-direction: column;
-        z-index: 99;
+    .section_container {
 
-        &_header {
-            text-align: center;
-        }
+        @include Dflex(center);
 
-        &_body {
-            .todo_lists {
-                display: flex;
-                flex-direction: column;
-                gap: var(--md-p);
+        .todo {
+            width: 100%;
+            max-width: 600px;
+            padding: var(--md-p);
+            display: flex;
+            flex-direction: column;
+            z-index: 99;
 
-                .todo_item {
-                    border-bottom: 1px solid var(--border-color);
-                    @include Dflex(space-between);
+            &_header {
+                text-align: center;
+            }
+
+            &_body {
+                .todo_lists {
+                    display: flex;
+                    flex-direction: column;
                     gap: var(--md-p);
-                    padding: var(--sm-p);
 
-                    .checkbox_label {
-                        display: flex;
-                        flex: 1;
-                        align-items: center;
+                    .todo_item {
+                        border-bottom: 1px solid var(--border-color);
+                        @include Dflex(space-between);
                         gap: var(--md-p);
-                    }
+                        padding: var(--sm-p);
 
-                    button {
-                        border: 1px solid var(--border-color);
-                    }
+                        .checkbox_label {
+                            display: flex;
+                            flex: 1;
+                            align-items: center;
+                            gap: var(--md-p);
+                        }
 
-                    &.completed {
-                        .todo_title {
-                            text-decoration: line-through;
+                        button {
+                            border: 1px solid var(--border-color);
+                        }
+
+                        &.completed {
+                            .todo_title {
+                                text-decoration: line-through;
+                            }
                         }
                     }
                 }
             }
-        }
 
-        &_footer {
-            @include Dflex(center);
+            &_footer {
+                @include Dflex(center);
+            }
         }
+    }
+
+    .header_container,
+    .footer_container {
+        text-align: center;
+        padding: var(--xl-p) var(--md-p);
     }
 
     .backdrop {
@@ -102,7 +112,6 @@
     @media only screen and (max-width: 768px) {
         & {
             .todo {
-                height: 100dvh;
                 gap: var(--md-p);
 
                 &_body {
